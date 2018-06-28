@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary mr-1"
+        routerLink="/new-server">Add Server</button>
+    </div>
+  </div>
+  <br>
+  <div class="table-responsive">
+  <table class="table  table-borderless table-inverse table-striped">
+    <tr>
+      <th>Server Name</th>
+      <th>Host Address</th>
+      <th>Port Number</th>
+      <th class="text-right">Created By</th>
+    </tr>
+    <tr *ngFor="let server of serverList">
+      <td>
+        <a [routerLink]="['/server/view', server.id]">{{server.serverName}}</a>
+      </td>
+      <td>
+        {{server.hostAddr}}
+      </td>
+      <td>
+        {{server.portNumber}}
+      </td>
+      <td class="text-right">
+        {{server.createdBy}}
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>

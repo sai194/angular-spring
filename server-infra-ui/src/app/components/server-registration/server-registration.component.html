@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+        class="panel panel-default" >
+        <div class="panel-heading">
+          <h3>Server Information</h3>
+
+          <div class="clearfix"></div>
+        </div>
+        <div class="panel-body">
+    <div class="form-group">
+      <label>Server Name</label>
+      <div class="form-control" >{{serverReg.serverName}}</div>
+    </div>
+    <div class="form-group">
+      <label>Host Address</label>
+      <div class="form-control">{{serverReg.hostAddr}}</div>
+    </div>
+    <div class="form-group">
+      <label>Port Number</label>
+      <div class="form-control">{{serverReg.portNumber}}</div>
+    </div>
+          <button class="btn btn-success " (click)="updateServer()">Save</button>
+          <button class="btn btn-primary pull-right" routerLink="/">Back to List</button>
+  </div>
+      </div>
+  </div>
+</div>
+</div>

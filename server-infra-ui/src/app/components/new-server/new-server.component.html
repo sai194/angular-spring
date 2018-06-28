@@ -1,0 +1,37 @@
+<div class="container">
+   <div class="row">
+      <div class="col-xs-12">
+        <div
+          class="panel panel-default" >
+          <div class="panel-heading">
+            <h3>Server Information</h3>
+
+            <div class="clearfix"></div>
+          </div>
+          <div class="panel-body">
+  <form [formGroup]="serverform" (ngSubmit)="createServer()" novalidate>
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info" [ngStyle]="{'color': 'red'}">{{validMessage}}</h3>
+    </div>
+    <div class="form-group">
+      <label>Server Name</label>
+      <input type="text" class="form-control" formControlName="serverName" required autofocus/>
+    </div>
+    <div class="form-group">
+      <label>Host Address</label>
+      <input type="text" class="form-control" formControlName="hostAddr" required/>
+    </div>
+    <div class="form-group">
+      <label>Port Number</label>
+      <input type="text" class="form-control" formControlName="portNumber" required/>
+    </div>
+    <button type="submit" class="btn btn-success" >Submit</button>
+    <button class="btn btn-primary pull-right" routerLink="/">Back to List</button>
+  </form>
+
+</div>
+        </div>
+      </div>
+   </div>
+</div>
+
